@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
 import { getWeather } from '../services/weatherService';
-import { WeatherResponse, CurrentWeather } from '../types/weather';
+import { WeatherResponse, CurrentWeather, WeatherError } from '../types/weather';
 
-export default async function getWeatherData(req: Request, res: Response): Promise<void | Response<any>> {
+export default async function WeatherController(req: Request, res: Response): Promise<void | Response<WeatherError>> {
   try {
     const cityName: string = req.body.cityName;
     if (!cityName) {

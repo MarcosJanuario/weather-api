@@ -63,3 +63,7 @@ export interface CurrentWeather {
     utcOffset: string;
   };
 }
+
+export type WeatherError = {
+  error: string;
+}
