@@ -18,12 +18,23 @@ export default async function getWeatherData(req: Request, res: Response): Promi
       windDegree: weatherData.current.wind_degree,
       windDir: weatherData.current.wind_dir,
       pressure: weatherData.current.pressure,
-      precip: weatherData.current.precip,
+      precipitation: weatherData.current.precip,
       humidity: weatherData.current.humidity,
-      cloudcover: weatherData.current.cloudcover,
-      feelslike: weatherData.current.feelslike,
+      cloudCover: weatherData.current.cloudcover,
+      feelsLike: weatherData.current.feelslike,
       uvIndex: weatherData.current.uv_index,
       visibility: weatherData.current.visibility,
+      location: {
+        name: weatherData.location.name,
+        country: weatherData.location.country,
+        region: weatherData.location.region,
+        lat: weatherData.location.lat,
+        lon: weatherData.location.lon,
+        timezoneId: weatherData.location.timezone_id,
+        localtime: weatherData.location.localtime,
+        localtimeEpoch: weatherData.location.localtime_epoch,
+        utcOffset: weatherData.location.utc_offset,
+      },
     };
 
     res.json(currentWeather);

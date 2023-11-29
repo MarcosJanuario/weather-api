@@ -45,10 +45,21 @@ export interface CurrentWeather {
   windDegree: number;
   windDir: string;
   pressure: number;
-  precip: number;
+  precipitation: number;
   humidity: number;
-  cloudcover: number;
-  feelslike: number;
+  cloudCover: number;
+  feelsLike: number;
   uvIndex: number;
   visibility: number;
+  location: {
+    name: string;
+    country: string;
+    region: string;
+    lat: string;
+    lon: string;
+    timezoneId: string;
+    localtime: string;
+    localtimeEpoch: number;
+    utcOffset: string;
+  };
 }
