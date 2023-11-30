@@ -38,6 +38,14 @@ Start the server using nodemon:
 nodemon dist/app.js
 ```
 
+### Running on Container:
+To run the application inside a Docker container (if you have Docker installed), use the following command:
+```bash
+docker run -p 3000:3000 -e WEATHER_API_KEY=[YOUR_API_KEY] --name webapi_c -v [YOUR_FULL_PATH_FOR_VOLUME_MAPPING]:/usr/src/app weather-api:v1
+```
+
+Make sure to replace [YOUR_API_KEY] with your actual Weatherstack API key and [YOUR_FULL_PATH_FOR_VOLUME_MAPPING] with the full path to your project directory. This command maps your local project directory to the /usr/src/app directory inside the container.
+
 ### Make Requests:
 Perform requests by providing the desired cityName in the request body:
 ```bash
