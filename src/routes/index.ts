@@ -7,6 +7,7 @@ router.get('/', (req, res) => {
   res.send('Weather API working!');
 });
 
+router.post('/', WeatherController);
 router.post('/weather', WeatherController);
 
 export default router;
