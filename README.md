@@ -1,4 +1,4 @@
-# Marcos Weather App
+# Marcos Weather API
 
 Weather API with NodeJS (WIP)
 
