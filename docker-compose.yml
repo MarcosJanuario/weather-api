@@ -1,0 +1,9 @@
+version: '3'
+services:
+  webapi:
+    build: ./
+    container_name: webapi_c
+    ports:
+      - "3000:3000"
+#    environment:
+#      - WEATHER_API_KEY=[KEY API]
